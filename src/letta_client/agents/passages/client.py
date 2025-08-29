@@ -36,6 +36,7 @@ class PassagesClient:
         limit: typing.Optional[int] = None,
         search: typing.Optional[str] = None,
         ascending: typing.Optional[bool] = None,
+        embed_query: typing.Optional[bool] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> typing.List[Passage]:
         """
@@ -87,6 +88,7 @@ class PassagesClient:
             limit=limit,
             search=search,
             ascending=ascending,
+            embed_query=embed_query,
             request_options=request_options,
         )
         return _response.data
@@ -234,6 +236,7 @@ class AsyncPassagesClient:
         limit: typing.Optional[int] = None,
         search: typing.Optional[str] = None,
         ascending: typing.Optional[bool] = None,
+        embed_query: typing.Optional[bool] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> typing.List[Passage]:
         """
@@ -293,6 +296,7 @@ class AsyncPassagesClient:
             limit=limit,
             search=search,
             ascending=ascending,
+            embed_query=embed_query,
             request_options=request_options,
         )
         return _response.data

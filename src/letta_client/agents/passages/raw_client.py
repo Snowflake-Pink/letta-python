@@ -31,6 +31,7 @@ class RawPassagesClient:
         limit: typing.Optional[int] = None,
         search: typing.Optional[str] = None,
         ascending: typing.Optional[bool] = None,
+        embed_query: typing.Optional[bool] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> HttpResponse[typing.List[Passage]]:
         """
@@ -72,6 +73,7 @@ class RawPassagesClient:
                 "limit": limit,
                 "search": search,
                 "ascending": ascending,
+                "embed_query": embed_query,
             },
             request_options=request_options,
         )
@@ -271,6 +273,7 @@ class AsyncRawPassagesClient:
         limit: typing.Optional[int] = None,
         search: typing.Optional[str] = None,
         ascending: typing.Optional[bool] = None,
+        embed_query: typing.Optional[bool] = None,
         request_options: typing.Optional[RequestOptions] = None,
     ) -> AsyncHttpResponse[typing.List[Passage]]:
         """
@@ -312,6 +315,7 @@ class AsyncRawPassagesClient:
                 "limit": limit,
                 "search": search,
                 "ascending": ascending,
+                "embed_query": embed_query,
             },
             request_options=request_options,
         )
